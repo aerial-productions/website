@@ -4,113 +4,211 @@
     box-sizing:border-box;
 }
 
+html,
 body{
+    width:100%;
+    height:100%;
     font-family:Arial, sans-serif;
+    cursor:auto;
 }
 
+a,
+button,
+.menu-btn,
+.sidebar a,
+.close-btn{
+    cursor:pointer;
+}
+
+/* HERO SECTION */
+
 .hero{
+    position:relative;
+
     height:100vh;
 
     background:
     linear-gradient(
-        rgba(0,0,0,.5),
-        rgba(0,0,0,.5)
+        rgba(0,0,0,0.55),
+        rgba(0,0,0,0.55)
     ),
     url("../images/hero-bg.jpg");
 
     background-size:cover;
     background-position:center;
+    background-repeat:no-repeat;
 
     display:flex;
     flex-direction:column;
     justify-content:center;
     align-items:center;
 
-    color:white;
     text-align:center;
+    color:white;
+
+    padding:20px;
 }
 
 .logo{
     width:220px;
+    max-width:70vw;
     margin-bottom:20px;
 }
 
 .hero h1{
     font-size:4rem;
+    letter-spacing:3px;
+    margin-bottom:15px;
+
+    text-shadow:
+        0 0 10px rgba(0,0,0,0.7);
 }
 
 .hero p{
-    margin-top:15px;
     font-size:1.2rem;
+    margin-bottom:30px;
+
+    text-shadow:
+        0 0 10px rgba(0,0,0,0.7);
 }
 
+/* BUTTON */
+
 .btn{
-    margin-top:30px;
+    display:inline-block;
+
     padding:14px 30px;
 
     background:white;
     color:black;
 
     text-decoration:none;
-    border-radius:8px;
+
+    border-radius:10px;
+
+    font-weight:bold;
+
+    transition:0.3s ease;
 }
+
+.btn:hover{
+    transform:translateY(-2px);
+    background:#f2f2f2;
+}
+
+/* HAMBURGER MENU */
 
 .menu-btn{
     position:absolute;
+
     top:20px;
     right:20px;
 
-    font-size:32px;
+    width:70px;
+    height:70px;
 
-    background:none;
+    background:rgba(0,0,0,0.75);
+
     border:none;
+    border-radius:15px;
 
     color:white;
-    cursor:pointer;
+
+    font-size:36px;
+    font-weight:bold;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    z-index:9999;
+
+    transition:all 0.25s ease;
 }
 
-.sidebar{
-    height:100%;
-    width:0;
+.menu-btn:hover{
+    background:rgba(0,0,0,0.95);
+    transform:scale(1.05);
+}
 
+.menu-btn:active{
+    transform:scale(0.95);
+}
+
+/* SIDEBAR */
+
+.sidebar{
     position:fixed;
-    right:0;
+
     top:0;
+    right:0;
+
+    width:0;
+    height:100%;
 
     background:#111;
 
     overflow-x:hidden;
 
-    transition:.3s;
+    transition:0.3s ease;
 
-    padding-top:60px;
+    padding-top:80px;
+
+    z-index:10000;
+
+    box-shadow:
+        -5px 0 20px rgba(0,0,0,0.4);
 }
 
 .sidebar a{
     display:block;
 
+    padding:18px 30px;
+
     color:white;
 
     text-decoration:none;
 
-    padding:15px 25px;
-
     font-size:22px;
+
+    transition:0.2s ease;
 }
 
 .sidebar a:hover{
     background:#222;
+    padding-left:40px;
 }
 
 .close-btn{
     position:absolute;
 
-    top:10px;
-    left:20px;
+    top:15px;
+    left:25px;
+
+    font-size:42px;
 
     color:white;
+}
 
-    font-size:40px;
+/* MOBILE */
 
-    cursor:pointer;
+@media (max-width:768px){
+
+    .hero h1{
+        font-size:2.5rem;
+    }
+
+    .hero p{
+        font-size:1rem;
+    }
+
+    .logo{
+        width:160px;
+    }
+
+    .menu-btn{
+        width:60px;
+        height:60px;
+        font-size:30px;
+    }
 }
