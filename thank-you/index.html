@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Thank You - Aerial Productions</title>
 
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
 
@@ -18,28 +18,85 @@
 
         <a href="/" onclick="closeMenu()">Home</a>
         <a href="/#about" onclick="closeMenu()">About Me</a>
-        <a href="/#portfolio" onclick="closeMenu()">Portfolio</a>
-        <a href="/#products" onclick="closeMenu()">Products</a>
+        <a href="/portfolio/" onclick="closeMenu()">Portfolio</a>
+        <a href="/services/" onclick="closeMenu()">Services</a>
         <a href="/#contact" onclick="closeMenu()">Contact</a>
 
     </div>
+
+    <!-- MENU BUTTON -->
+    <button class="menu-btn hero-visible" onclick="openMenu()" aria-label="Open Menu">
+        ☰
+    </button>
 
     <!-- THANK YOU SECTION -->
     <section class="section thank-you-section">
         <div class="thank-you-container">
             <div class="thank-you-content">
-                <h1>Thank You!</h1>
                 <div class="success-icon">✓</div>
+                <h1>Thank You!</h1>
                 <p class="thank-you-message">
                     Thank you for reaching out to Aerial Productions. I've received your inquiry and appreciate you taking the time to contact me.
                 </p>
                 <p class="thank-you-message">
-                    I'm committed to providing prompt and professional responses. You can expect to hear back from me within the next <strong>24 hours</strong>. If your inquiry is particularly time-sensitive, please mention that in your message.
+                    I'm committed to providing prompt and professional responses. You can expect to hear back from me within the next <strong>24 hours</strong>. If your inquiry is particularly time-sensitive, feel free to reach out directly via phone or social media.
                 </p>
                 <p class="thank-you-message">
                     In the meantime, feel free to explore my portfolio or follow me on social media for the latest aerial content and updates.
                 </p>
                 <a href="/" class="btn btn-return">Return to Home</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- NEXT STEPS SECTION -->
+    <section class="section next-steps-section">
+        <div class="next-steps-container">
+            <h2>What Happens Next?</h2>
+            
+            <div class="steps-grid">
+                
+                <div class="step-item">
+                    <div class="step-number">1</div>
+                    <h3>Confirmation</h3>
+                    <p>You'll receive a confirmation email shortly with a summary of your inquiry.</p>
+                </div>
+
+                <div class="step-item">
+                    <div class="step-number">2</div>
+                    <h3>Review & Response</h3>
+                    <p>I'll review your details and reach out within 24 hours with information and next steps.</p>
+                </div>
+
+                <div class="step-item">
+                    <div class="step-number">3</div>
+                    <h3>Discussion</h3>
+                    <p>We'll discuss your project needs, timeline, and how I can best serve you.</p>
+                </div>
+
+                <div class="step-item">
+                    <div class="step-number">4</div>
+                    <h3>Project Kickoff</h3>
+                    <p>Once we've aligned on details, we'll schedule and execute your project.</p>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- SOCIAL SECTION -->
+    <section class="section social-section">
+        <div class="social-container">
+            <h2>Follow My Work</h2>
+            <p>Stay updated with the latest aerial photography and videography</p>
+            <div class="social-links-large">
+                <a href="https://www.instagram.com/aerial.productions01/" target="_blank" rel="noopener noreferrer" class="social-link">
+                    📱 Instagram
+                </a>
+                <a href="https://www.facebook.com/profile.php?id=61590356492875" target="_blank" rel="noopener noreferrer" class="social-link">
+                    👥 Facebook
+                </a>
             </div>
         </div>
     </section>
@@ -60,7 +117,7 @@
             </div>
             <div class="footer-section">
                 <h4>Contact</h4>
-                <p><a href="mailto:info@aerial-productions.com.au">info@aerial-productions.com.au</a></p>
+                <p><a href="mailto:aerial-productions01@gmail.com">aerial-productions01@gmail.com</a></p>
             </div>
         </div>
         <div class="footer-bottom">
@@ -68,7 +125,7 @@
         </div>
     </footer>
 
-<script src="js/menu.js"></script>
+    <script src="../js/menu.js"></script>
 
 </body>
 </html>
