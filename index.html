@@ -9,6 +9,7 @@
 </head>
 <body>
 
+    <!-- HERO SECTION -->
     <div class="hero">
 
         <button class="menu-btn" onclick="openMenu()" aria-label="Open Menu">
@@ -23,25 +24,82 @@
             Aerial Photography • Videography • Content Creation
         </p>
 
-        <a href="portfolio" class="btn">
+        <a href="#portfolio" class="btn">
             View Portfolio
         </a>
 
     </div>
 
+    <!-- SIDEBAR -->
     <div id="sidebar" class="sidebar">
 
         <span class="close-btn" onclick="closeMenu()">
             ×
         </span>
 
-        <a href="/">Home</a>
-        <a href="/portfolio/">Portfolio</a>
-        <a href="/products/">Products</a>
-        <a href="/about/">About</a>
-        <a href="/contact/">Contact</a>
+        <a href="#home">Home</a>
+        <a href="#portfolio">Portfolio</a>
+        <a href="#products">Products</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
 
     </div>
+
+    <!-- ABOUT ME SECTION -->
+    <section id="about" class="section about-section">
+        <div class="section-content">
+            <h2>About Me</h2>
+            <p>
+                Welcome to Aerial Productions! I'm passionate about capturing stunning aerial footage and creating high-quality content that tells compelling stories. With years of experience in drone photography and videography, I bring a unique perspective to every project.
+            </p>
+            <p>
+                Whether you're looking for breathtaking aerial shots, professional video production, or creative content for your brand, I'm here to bring your vision to life.
+            </p>
+            <div class="about-highlights">
+                <div class="highlight">
+                    <h3>📸 Photography</h3>
+                    <p>Professional aerial photography for real estate, events, and more.</p>
+                </div>
+                <div class="highlight">
+                    <h3>🎬 Videography</h3>
+                    <p>Cinematic drone footage and video production services.</p>
+                </div>
+                <div class="highlight">
+                    <h3>✨ Content Creation</h3>
+                    <p>Engaging visual content for social media and marketing.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT SECTION -->
+    <section id="contact" class="section contact-section">
+        <div class="section-content">
+            <h2>Get In Touch</h2>
+            <p>
+                Ready to start your next project? I'd love to hear from you. Reach out and let's create something amazing together!
+            </p>
+            
+            <div class="contact-info">
+                <div class="contact-item">
+                    <h3>📧 Email</h3>
+                    <p><a href="mailto:info@aerial-productions.com.au">info@aerial-productions.com.au</a></p>
+                </div>
+                <div class="contact-item">
+                    <h3>📱 Phone</h3>
+                    <p><a href="tel:+61234567890">+61 (2) 3456 7890</a></p>
+                </div>
+                <div class="contact-item">
+                    <h3>📍 Location</h3>
+                    <p>Australia</p>
+                </div>
+            </div>
+
+            <a href="mailto:info@aerial-productions.com.au" class="btn btn-primary">
+                Send Me a Message
+            </a>
+        </div>
+    </section>
 
 <script src="js/menu.js"></script>
 
