@@ -16,30 +16,16 @@ window.addEventListener('scroll', function() {
     
     // Check scroll direction
     if (currentScroll > lastScrollTop) {
-        // Scrolling DOWN
+        // Scrolling DOWN - hide menu button
         scrollDirection = 'down';
         if (menuBtn) {
             menuBtn.classList.remove('visible');
         }
     } else if (currentScroll < lastScrollTop) {
-        // Scrolling UP
+        // Scrolling UP - show menu button
         scrollDirection = 'up';
-        if (currentScroll > 100) { // Only show when scrolled past hero section
-            if (menuBtn) {
-                menuBtn.classList.add('visible');
-            }
-        }
-    }
-    
-    // Show menu on hero section
-    if (currentScroll < 100) {
         if (menuBtn) {
-            menuBtn.classList.add('hero-visible');
-            menuBtn.classList.remove('visible');
-        }
-    } else if (currentScroll > 100 && scrollDirection === 'down') {
-        if (menuBtn) {
-            menuBtn.classList.remove('visible');
+            menuBtn.classList.add('visible');
         }
     }
     
