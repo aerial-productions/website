@@ -1,13 +1,164 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<title>Portfolio</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - Aerial Productions</title>
+
+    <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
 
-<h1>Portfolio</h1>
+    <!-- SIDEBAR -->
+    <div id="sidebar" class="sidebar">
 
-<a href="https://aerial-productions.com.au/">Back Home</a>
+        <span class="close-btn" onclick="closeMenu()">
+            ×
+        </span>
+
+        <a href="/" onclick="closeMenu()">Home</a>
+        <a href="/#about" onclick="closeMenu()">About Me</a>
+        <a href="/portfolio/" onclick="closeMenu()">Portfolio</a>
+        <a href="/services/" onclick="closeMenu()">Services</a>
+        <a href="/#contact" onclick="closeMenu()">Contact</a>
+
+    </div>
+
+    <!-- MENU BUTTON -->
+    <button class="menu-btn hero-visible" onclick="openMenu()" aria-label="Open Menu">
+        ☰
+    </button>
+
+    <!-- PORTFOLIO HERO SECTION -->
+    <div class="portfolio-hero">
+        <h1>PORTFOLIO</h1>
+        <p>Showcasing Excellence in Aerial Photography & Videography</p>
+    </div>
+
+    <!-- PORTFOLIO GALLERY SECTION -->
+    <section class="section portfolio-section">
+        <div class="portfolio-container">
+            <h2>Featured Work</h2>
+            
+            <div class="portfolio-grid">
+                
+                <div class="portfolio-item">
+                    <div class="portfolio-image">
+                        <img src="../images/portfolio-1.jpg" alt="Real Estate Photography">
+                        <div class="portfolio-overlay">
+                            <h3>Real Estate Photography</h3>
+                        </div>
+                    </div>
+                    <div class="portfolio-info">
+                        <h3>Real Estate Showcase</h3>
+                        <p>High-resolution aerial photography capturing properties in their best light.</p>
+                    </div>
+                </div>
+
+                <div class="portfolio-item">
+                    <div class="portfolio-image">
+                        <img src="../images/portfolio-2.jpg" alt="Event Videography">
+                        <div class="portfolio-overlay">
+                            <h3>Event Videography</h3>
+                        </div>
+                    </div>
+                    <div class="portfolio-info">
+                        <h3>Event Coverage</h3>
+                        <p>Cinematic aerial footage that brings your events to life with stunning visuals.</p>
+                    </div>
+                </div>
+
+                <div class="portfolio-item">
+                    <div class="portfolio-image">
+                        <img src="../images/portfolio-3.jpg" alt="Commercial Project">
+                        <div class="portfolio-overlay">
+                            <h3>Commercial Projects</h3>
+                        </div>
+                    </div>
+                    <div class="portfolio-info">
+                        <h3>Commercial Excellence</h3>
+                        <p>Professional aerial content crafted for brands and commercial campaigns.</p>
+                    </div>
+                </div>
+
+                <div class="portfolio-item">
+                    <div class="portfolio-image">
+                        <img src="../images/portfolio-4.jpg" alt="Landscape Photography">
+                        <div class="portfolio-overlay">
+                            <h3>Landscape Photography</h3>
+                        </div>
+                    </div>
+                    <div class="portfolio-info">
+                        <h3>Natural Beauty</h3>
+                        <p>Breathtaking landscapes and scenic aerial shots showcasing nature's majesty.</p>
+                    </div>
+                </div>
+
+                <div class="portfolio-item">
+                    <div class="portfolio-image">
+                        <img src="../images/portfolio-5.jpg" alt="Drone Footage">
+                        <div class="portfolio-overlay">
+                            <h3>Cinematic Drone Work</h3>
+                        </div>
+                    </div>
+                    <div class="portfolio-info">
+                        <h3>Cinematic Production</h3>
+                        <p>Smooth, dynamic drone footage with professional color grading and transitions.</p>
+                    </div>
+                </div>
+
+                <div class="portfolio-item">
+                    <div class="portfolio-image">
+                        <img src="../images/portfolio-6.jpg" alt="Social Media Content">
+                        <div class="portfolio-overlay">
+                            <h3>Social Media Content</h3>
+                        </div>
+                    </div>
+                    <div class="portfolio-info">
+                        <h3>Digital Marketing</h3>
+                        <p>Engaging short-form and long-form content optimized for social platforms.</p>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- CTA SECTION -->
+    <section class="section cta-section">
+        <div class="cta-container">
+            <h2>Ready to Work Together?</h2>
+            <p>Let's bring your vision to life with stunning aerial content</p>
+            <a href="/#contact" class="btn">Get in Touch</a>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>Services Available</h4>
+                <p>Central Coast</p>
+            </div>
+            <div class="footer-section">
+                <h4>Follow Me</h4>
+                <div class="social-links">
+                    <a href="https://www.instagram.com/aerial.productions01/" target="_blank" rel="noopener noreferrer">Instagram</a>
+                    <a href="https://www.facebook.com/profile.php?id=61590356492875" target="_blank" rel="noopener noreferrer">Facebook</a>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h4>Contact</h4>
+                <p><a href="mailto:aerial-productions01@gmail.com">aerial-productions01@gmail.com</a></p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Aerial Productions. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="../js/menu.js"></script>
 
 </body>
 </html>
