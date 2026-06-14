@@ -7,7 +7,6 @@
 html,
 body{
     width:100%;
-    height:100%;
     font-family:Arial, sans-serif;
     cursor:auto;
 }
@@ -94,6 +93,121 @@ button,
 .btn:hover{
     transform:translateY(-2px);
     background:#f2f2f2;
+}
+
+/* SECTIONS */
+
+.section{
+    min-height:100vh;
+    padding:80px 20px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
+
+.section-content{
+    max-width:1000px;
+    width:100%;
+}
+
+.section h2{
+    font-size:3rem;
+    margin-bottom:30px;
+    text-align:center;
+}
+
+.section p{
+    font-size:1.1rem;
+    line-height:1.6;
+    margin-bottom:20px;
+    text-align:center;
+}
+
+/* ABOUT SECTION */
+
+.about-section{
+    background:#f9f9f9;
+    color:#333;
+}
+
+.about-highlights{
+    display:grid;
+    grid-template-columns:repeat(auto-fit, minmax(250px, 1fr));
+    gap:30px;
+    margin-top:50px;
+}
+
+.highlight{
+    background:white;
+    padding:30px;
+    border-radius:10px;
+    box-shadow:0 4px 15px rgba(0,0,0,0.1);
+    text-align:center;
+    transition:0.3s ease;
+}
+
+.highlight:hover{
+    transform:translateY(-5px);
+    box-shadow:0 6px 20px rgba(0,0,0,0.15);
+}
+
+.highlight h3{
+    font-size:1.3rem;
+    margin-bottom:15px;
+}
+
+.highlight p{
+    font-size:1rem;
+    text-align:center;
+    margin-bottom:0;
+}
+
+/* CONTACT SECTION */
+
+.contact-section{
+    background:linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color:white;
+}
+
+.contact-info{
+    display:grid;
+    grid-template-columns:repeat(auto-fit, minmax(250px, 1fr));
+    gap:40px;
+    margin:50px 0;
+}
+
+.contact-item{
+    text-align:center;
+}
+
+.contact-item h3{
+    font-size:1.3rem;
+    margin-bottom:15px;
+}
+
+.contact-item p{
+    font-size:1.1rem;
+}
+
+.contact-item a{
+    color:white;
+    text-decoration:none;
+    font-weight:bold;
+    transition:0.3s ease;
+}
+
+.contact-item a:hover{
+    text-decoration:underline;
+}
+
+.btn-primary{
+    background:#fff;
+    color:#667eea;
+    margin-top:30px;
+}
+
+.btn-primary:hover{
+    background:#f0f0f0;
 }
 
 /* HAMBURGER MENU */
@@ -210,5 +324,29 @@ button,
         width:60px;
         height:60px;
         font-size:30px;
+    }
+
+    .section{
+        padding:60px 20px;
+    }
+
+    .section h2{
+        font-size:2rem;
+    }
+
+    .section p{
+        font-size:1rem;
+    }
+
+    .about-highlights{
+        gap:20px;
+    }
+
+    .highlight{
+        padding:20px;
+    }
+
+    .contact-info{
+        gap:30px;
     }
 }
