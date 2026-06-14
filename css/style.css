@@ -445,7 +445,7 @@ button,
 /* HAMBURGER MENU */
 
 .menu-btn{
-    position:absolute;
+    position:fixed;
 
     top:20px;
     right:20px;
@@ -469,7 +469,23 @@ button,
 
     z-index:9999;
 
-    transition:all 0.25s ease;
+    transition:all 0.3s ease;
+    
+    opacity:0;
+    visibility:hidden;
+    transform:translateY(-100px);
+}
+
+.menu-btn.visible{
+    opacity:1;
+    visibility:visible;
+    transform:translateY(0);
+}
+
+.menu-btn.hero-visible{
+    opacity:1;
+    visibility:visible;
+    transform:translateY(0);
 }
 
 .menu-btn:hover{
