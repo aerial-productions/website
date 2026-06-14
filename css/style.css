@@ -7,7 +7,7 @@
 html,
 body{
     width:100%;
-    font-family:Arial, sans-serif;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     cursor:auto;
 }
 
@@ -88,6 +88,10 @@ button,
     font-weight:bold;
 
     transition:0.3s ease;
+
+    border:none;
+
+    font-size:1rem;
 }
 
 .btn:hover{
@@ -95,119 +99,239 @@ button,
     background:#f2f2f2;
 }
 
+.btn-submit{
+    background:#333;
+    color:white;
+    padding:12px 40px;
+    margin-top:20px;
+}
+
+.btn-submit:hover{
+    background:#555;
+}
+
 /* SECTIONS */
 
 .section{
     min-height:100vh;
-    padding:80px 20px;
+    padding:100px 20px;
     display:flex;
     align-items:center;
     justify-content:center;
 }
 
 .section-content{
-    max-width:1000px;
+    max-width:900px;
     width:100%;
 }
 
 .section h2{
-    font-size:3rem;
-    margin-bottom:30px;
+    font-size:3.5rem;
+    margin-bottom:40px;
     text-align:center;
+    color:#333;
+    font-weight:600;
 }
 
 .section p{
     font-size:1.1rem;
-    line-height:1.6;
-    margin-bottom:20px;
-    text-align:center;
+    line-height:1.8;
+    margin-bottom:25px;
+    color:#555;
+    text-align:left;
 }
 
 /* ABOUT SECTION */
 
 .about-section{
-    background:#f9f9f9;
+    background:#f5f5f5;
+}
+
+.about-intro{
+    margin-bottom:60px;
+}
+
+.about-intro p:first-child{
+    font-size:1.15rem;
     color:#333;
+    margin-bottom:20px;
 }
 
-.about-highlights{
-    display:grid;
-    grid-template-columns:repeat(auto-fit, minmax(250px, 1fr));
-    gap:30px;
-    margin-top:50px;
-}
-
-.highlight{
+.about-services{
     background:white;
-    padding:30px;
-    border-radius:10px;
-    box-shadow:0 4px 15px rgba(0,0,0,0.1);
-    text-align:center;
-    transition:0.3s ease;
+    padding:50px 40px;
+    border-radius:8px;
+    box-shadow:0 2px 10px rgba(0,0,0,0.08);
+    margin-top:40px;
 }
 
-.highlight:hover{
-    transform:translateY(-5px);
-    box-shadow:0 6px 20px rgba(0,0,0,0.15);
+.about-services h3{
+    font-size:1.5rem;
+    margin-bottom:30px;
+    color:#333;
+    font-weight:600;
 }
 
-.highlight h3{
-    font-size:1.3rem;
-    margin-bottom:15px;
+.service-item{
+    margin-bottom:25px;
+    padding-bottom:25px;
+    border-bottom:1px solid #e0e0e0;
 }
 
-.highlight p{
-    font-size:1rem;
-    text-align:center;
+.service-item:last-child{
+    border-bottom:none;
     margin-bottom:0;
+    padding-bottom:0;
+}
+
+.service-item strong{
+    display:block;
+    color:#333;
+    margin-bottom:8px;
+    font-size:1.05rem;
+}
+
+.service-item p{
+    margin:0;
+    color:#666;
 }
 
 /* CONTACT SECTION */
 
 .contact-section{
-    background:linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-    color:white;
+    background:white;
+    padding:100px 20px;
 }
 
-.contact-info{
-    display:grid;
-    grid-template-columns:repeat(auto-fit, minmax(250px, 1fr));
-    gap:40px;
-    margin:50px 0;
-}
-
-.contact-item{
+.contact-heading{
     text-align:center;
+    margin-bottom:60px;
 }
 
-.contact-item h3{
-    font-size:1.3rem;
-    margin-bottom:15px;
+.contact-heading h2{
+    font-size:3.5rem;
+    color:#333;
+    margin-bottom:20px;
 }
 
-.contact-item p{
-    font-size:1.1rem;
+.contact-form{
+    max-width:600px;
+    margin:0 auto;
+    background:#f9f9f9;
+    padding:50px 40px;
+    border-radius:8px;
+    box-shadow:0 2px 10px rgba(0,0,0,0.08);
 }
 
-.contact-item a{
-    color:white;
-    text-decoration:none;
-    font-weight:bold;
+.form-group{
+    margin-bottom:25px;
+}
+
+.form-group label{
+    display:block;
+    margin-bottom:8px;
+    color:#333;
+    font-weight:600;
+    font-size:1rem;
+}
+
+.form-group input,
+.form-group textarea{
+    width:100%;
+    padding:12px 15px;
+    border:1px solid #ddd;
+    border-radius:5px;
+    font-family:Arial, sans-serif;
+    font-size:1rem;
     transition:0.3s ease;
 }
 
-.contact-item a:hover{
-    text-decoration:underline;
+.form-group input:focus,
+.form-group textarea:focus{
+    outline:none;
+    border-color:#333;
+    box-shadow:0 0 5px rgba(0,0,0,0.1);
 }
 
-.btn-primary{
-    background:#fff;
-    color:#667eea;
-    margin-top:30px;
+.form-group textarea{
+    resize:vertical;
+    min-height:120px;
 }
 
-.btn-primary:hover{
-    background:#f0f0f0;
+.form-submit{
+    width:100%;
+    text-align:center;
+}
+
+/* FOOTER */
+
+.footer{
+    background:#222;
+    color:white;
+    padding:50px 20px 30px;
+    text-align:center;
+}
+
+.footer-content{
+    max-width:1000px;
+    margin:0 auto;
+}
+
+.footer-section{
+    margin-bottom:40px;
+}
+
+.footer-section h3{
+    font-size:1.3rem;
+    margin-bottom:15px;
+    font-weight:600;
+}
+
+.social-links{
+    display:flex;
+    justify-content:center;
+    gap:20px;
+    margin-bottom:30px;
+}
+
+.social-links a{
+    display:inline-block;
+    width:45px;
+    height:45px;
+    background:#444;
+    border-radius:50%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    color:white;
+    text-decoration:none;
+    font-size:1.3rem;
+    transition:0.3s ease;
+}
+
+.social-links a:hover{
+    background:#666;
+    transform:translateY(-3px);
+}
+
+.service-area{
+    margin:20px 0;
+    font-size:1rem;
+}
+
+.footer-divider{
+    border-top:1px solid #444;
+    margin:30px 0;
+    padding-top:20px;
+}
+
+.footer-bottom{
+    font-size:0.95rem;
+    color:#aaa;
+}
+
+.footer-bottom p{
+    margin:0;
 }
 
 /* HAMBURGER MENU */
@@ -331,22 +455,32 @@ button,
     }
 
     .section h2{
-        font-size:2rem;
+        font-size:2.2rem;
     }
 
     .section p{
         font-size:1rem;
     }
 
-    .about-highlights{
-        gap:20px;
+    .about-services{
+        padding:30px 20px;
     }
 
-    .highlight{
-        padding:20px;
+    .about-services h3{
+        font-size:1.3rem;
     }
 
-    .contact-info{
-        gap:30px;
+    .contact-form{
+        padding:30px 20px;
+    }
+
+    .social-links{
+        gap:15px;
+    }
+
+    .social-links a{
+        width:40px;
+        height:40px;
+        font-size:1.1rem;
     }
 }
