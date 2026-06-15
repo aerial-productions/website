@@ -19,7 +19,6 @@
         <a href="/" onclick="closeMenu()">Home</a>
         <a href="/#about" onclick="closeMenu()">About Me</a>
         <a href="/portfolio/" onclick="closeMenu()">Portfolio</a>
-        <a href="/services/" onclick="closeMenu()">Services</a>
         <a href="/#contact" onclick="closeMenu()">Contact</a>
 
     </div>
@@ -32,21 +31,22 @@
     <!-- PORTFOLIO HERO SECTION -->
     <div class="portfolio-hero">
         <h1>PORTFOLIO</h1>
-        <p>Showcasing Excellence in Aerial Photography & Videography</p>
+        <p>Featured Work & Projects</p>
     </div>
 
-    <!-- PORTFOLIO GALLERY SECTION -->
+    <!-- PORTFOLIO SECTION -->
     <section class="section portfolio-section">
         <div class="portfolio-container">
             <h2>Featured Work</h2>
             
             <div class="portfolio-grid">
                 
-                <div class="portfolio-item">
+                <!-- Real Estate Showcase -->
+                <div class="portfolio-item" onclick="openGallery('real-estate')">
                     <div class="portfolio-image">
-                        <img src="../images/portfolio-1.jpg" alt="Real Estate Photography">
+                        <img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQEAYABgAAD/2wBDAAgGBgcGBQgHBwcJCQgKDBQNDAsLDBkSEw8UHRofHh0aHBwgJC4nICIsIxwcKDcpLDAxNDQ0Hyc5PTgyPC4zNDL/2wBDAQkJCQwLDBgNDRgyIRwhMjI[...]" alt="Real Estate Portfolio">
                         <div class="portfolio-overlay">
-                            <h3>Real Estate Photography</h3>
+                            <h3>View Gallery</h3>
                         </div>
                     </div>
                     <div class="portfolio-info">
@@ -55,11 +55,12 @@
                     </div>
                 </div>
 
-                <div class="portfolio-item">
+                <!-- Event Videography -->
+                <div class="portfolio-item" onclick="openGallery('events')">
                     <div class="portfolio-image">
-                        <img src="../images/portfolio-2.jpg" alt="Event Videography">
+                        <img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQEAYABgAAD/2wBDAAgGBgcGBQgHBwcJCQgKDBQNDAsLDBkSEw8UHRofHh0aHBwgJC4nICIsIxwcKDcpLDAxNDQ0Hyc5PTgyPC4zNDL/2wBDAQkJCQwLDBgNDRgyIRwhMjI[...]" alt="Event Coverage Portfolio">
                         <div class="portfolio-overlay">
-                            <h3>Event Videography</h3>
+                            <h3>View Gallery</h3>
                         </div>
                     </div>
                     <div class="portfolio-info">
@@ -68,55 +69,17 @@
                     </div>
                 </div>
 
-                <div class="portfolio-item">
+                <!-- Commercial Projects -->
+                <div class="portfolio-item" onclick="openGallery('commercial')">
                     <div class="portfolio-image">
-                        <img src="../images/portfolio-3.jpg" alt="Commercial Project">
+                        <img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQEAYABgAAD/2wBDAAgGBgcGBQgHBwcJCQgKDBQNDAsLDBkSEw8UHRofHh0aHBwgJC4nICIsIxwcKDcpLDAxNDQ0Hyc5PTgyPC4zNDL/2wBDAQkJCQwLDBgNDRgyIRwhMjI[...]" alt="Commercial Portfolio">
                         <div class="portfolio-overlay">
-                            <h3>Commercial Projects</h3>
+                            <h3>View Gallery</h3>
                         </div>
                     </div>
                     <div class="portfolio-info">
-                        <h3>Commercial Excellence</h3>
+                        <h3>Commercial Projects</h3>
                         <p>Professional aerial content crafted for brands and commercial campaigns.</p>
-                    </div>
-                </div>
-
-                <div class="portfolio-item">
-                    <div class="portfolio-image">
-                        <img src="../images/portfolio-4.jpg" alt="Landscape Photography">
-                        <div class="portfolio-overlay">
-                            <h3>Landscape Photography</h3>
-                        </div>
-                    </div>
-                    <div class="portfolio-info">
-                        <h3>Natural Beauty</h3>
-                        <p>Breathtaking landscapes and scenic aerial shots showcasing nature's majesty.</p>
-                    </div>
-                </div>
-
-                <div class="portfolio-item">
-                    <div class="portfolio-image">
-                        <img src="../images/portfolio-5.jpg" alt="Drone Footage">
-                        <div class="portfolio-overlay">
-                            <h3>Cinematic Drone Work</h3>
-                        </div>
-                    </div>
-                    <div class="portfolio-info">
-                        <h3>Cinematic Production</h3>
-                        <p>Smooth, dynamic drone footage with professional color grading and transitions.</p>
-                    </div>
-                </div>
-
-                <div class="portfolio-item">
-                    <div class="portfolio-image">
-                        <img src="../images/portfolio-6.jpg" alt="Social Media Content">
-                        <div class="portfolio-overlay">
-                            <h3>Social Media Content</h3>
-                        </div>
-                    </div>
-                    <div class="portfolio-info">
-                        <h3>Digital Marketing</h3>
-                        <p>Engaging short-form and long-form content optimized for social platforms.</p>
                     </div>
                 </div>
 
@@ -125,12 +88,36 @@
         </div>
     </section>
 
+    <!-- GALLERY MODAL -->
+    <div id="galleryModal" class="gallery-modal">
+        <div class="gallery-modal-content">
+            <span class="gallery-close" onclick="closeGallery()">&times;</span>
+            
+            <div class="gallery-container">
+                <button class="gallery-nav gallery-prev" onclick="previousPhoto()">❮</button>
+                
+                <div class="gallery-image-wrapper">
+                    <img id="galleryImage" src="" alt="Portfolio Gallery">
+                    <div class="gallery-counter">
+                        <span id="currentPhoto">1</span> / <span id="totalPhotos">3</span>
+                    </div>
+                </div>
+                
+                <button class="gallery-nav gallery-next" onclick="nextPhoto()">❯</button>
+            </div>
+
+            <div class="gallery-thumbnails" id="galleryThumbnails">
+                <!-- Thumbnails will be populated by JavaScript -->
+            </div>
+        </div>
+    </div>
+
     <!-- CTA SECTION -->
     <section class="section cta-section">
         <div class="cta-container">
             <h2>Ready to Work Together?</h2>
-            <p>Let's bring your vision to life with stunning aerial content</p>
-            <a href="/#contact" class="btn">Get in Touch</a>
+            <p>Let's discuss your project and create something amazing</p>
+            <a href="/#contact" class="btn">Contact Me Today</a>
         </div>
     </section>
 
@@ -159,6 +146,7 @@
     </footer>
 
     <script src="../js/menu.js"></script>
+    <script src="../js/portfolio.js"></script>
 
 </body>
 </html>
