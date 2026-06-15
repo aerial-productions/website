@@ -31,210 +31,219 @@
 
     <!-- SERVICES HERO SECTION -->
     <div class="services-hero">
-        <h1>SERVICES</h1>
-        <p>Professional Aerial Solutions for Your Project</p>
+        <h1>PROFESSIONAL SERVICES</h1>
+        <p>Aerial Photography & Event Coverage</p>
+        
+        <!-- SERVICE TABS -->
+        <div class="service-tabs">
+            <button class="service-tab-btn active" data-service="aerial" onclick="switchService('aerial')">
+                📷 Aerial Photography
+            </button>
+            <button class="service-tab-btn" data-service="events" onclick="switchService('events')">
+                🎥 Event Photography
+            </button>
+        </div>
     </div>
 
-    <!-- SERVICES OFFERINGS SECTION -->
-    <section class="section services-offerings-section">
-        <div class="services-offerings-container">
-            <h2>What I Offer</h2>
+    <!-- AERIAL PHOTOGRAPHY SERVICE SECTION -->
+    <section id="aerial-service" class="section service-detail-section active-service">
+        <div class="service-detail-container">
+            <h2>Aerial Photography</h2>
+            <p class="service-intro">Professional drone photography for real estate, commercial properties, and lifestyle documentation. Delivered with ethical editing and fast turnarounds.</p>
             
-            <div class="services-grid">
-                
-                <div class="service-card">
-                    <div class="service-icon">📷</div>
-                    <h3>Aerial Photography</h3>
-                    <p>
-                        Crisp, high-resolution aerial imagery captured with professional-grade equipment. 
-                        Perfect for real estate listings, property development showcases, and promotional materials.
-                    </p>
-                    <ul class="service-features">
-                        <li>4K Resolution Imagery</li>
-                        <li>Professional Color Grading</li>
-                        <li>Quick Turnaround Times</li>
-                        <li>Unlimited Shots</li>
-                    </ul>
+            <div class="service-features-grid">
+                <div class="feature-box">
+                    <div class="feature-icon">📸</div>
+                    <h4>High-Resolution Imagery</h4>
+                    <p>Professional-grade aerial photography with precise color grading and ethical enhancements</p>
                 </div>
-
-                <div class="service-card">
-                    <div class="service-icon">🎬</div>
-                    <h3>Cinematic Videography</h3>
-                    <p>
-                        Smooth, dynamic aerial footage with cinematic movement and professional transitions. 
-                        Tailored for commercials, real estate videos, event coverage, and brand storytelling.
-                    </p>
-                    <ul class="service-features">
-                        <li>4K/6K Video Capture</li>
-                        <li>Professional Editing</li>
-                        <li>Color Grading & Sound</li>
-                        <li>Multiple Delivery Formats</li>
-                    </ul>
+                <div class="feature-box">
+                    <div class="feature-icon">⚡</div>
+                    <h4>Fast Turnaround</h4>
+                    <p>Quick delivery times ranging from 2-10 hours depending on package</p>
                 </div>
-
-                <div class="service-card">
-                    <div class="service-icon">✨</div>
-                    <h3>Content Creation</h3>
-                    <p>
-                        Engaging short-form and long-form content optimized for social media, marketing campaigns, 
-                        and brand promotion. Designed to capture attention and drive engagement.
-                    </p>
-                    <ul class="service-features">
-                        <li>Social Media Optimization</li>
-                        <li>Trending Format Support</li>
-                        <li>Captions & Text Overlays</li>
-                        <li>Multi-Platform Delivery</li>
-                    </ul>
+                <div class="feature-box">
+                    <div class="feature-icon">🎯</div>
+                    <h4>Ethical Editing</h4>
+                    <p>Accurate, professional editing with no misleading enhancements</p>
                 </div>
-
-                <div class="service-card">
-                    <div class="service-icon">🎥</div>
-                    <h3>Event Coverage</h3>
-                    <p>
-                        Comprehensive aerial coverage of your special events, from weddings to corporate functions. 
-                        Capture the grandeur and scale of your celebration.
-                    </p>
-                    <ul class="service-features">
-                        <li>Full Event Coverage</li>
-                        <li>Edited Highlight Reel</li>
-                        <li>Day-Of Coordination</li>
-                        <li>Raw Footage Available</li>
-                    </ul>
+                <div class="feature-box">
+                    <div class="feature-icon">🚗</div>
+                    <h4>Free Local Travel</h4>
+                    <p>Travel included within 30 km of Crangan Bay</p>
                 </div>
-
-                <div class="service-card">
-                    <div class="service-icon">🏢</div>
-                    <h3>Commercial Shoots</h3>
-                    <p>
-                        Professional aerial content for corporate clients, advertising campaigns, and brand 
-                        development. Delivering polished, on-brand visual assets.
-                    </p>
-                    <ul class="service-features">
-                        <li>Brand-Aligned Content</li>
-                        <li>Licensing Included</li>
-                        <li>Multiple Revisions</li>
-                        <li>Project Coordination</li>
-                    </ul>
-                </div>
-
-                <div class="service-card">
-                    <div class="service-icon">🌍</div>
-                    <h3>Custom Projects</h3>
-                    <p>
-                        Specialized aerial solutions tailored to your unique needs. Whether it's surveying, 
-                        inspection, or creative vision, we've got you covered.
-                    </p>
-                    <ul class="service-features">
-                        <li>Custom Requirements</li>
-                        <li>Technical Consultation</li>
-                        <li>Flexible Scheduling</li>
-                        <li>Full Project Support</li>
-                    </ul>
-                </div>
-
             </div>
 
+            <button class="btn btn-scroll-to-pricing" onclick="scrollToPackages('aerial')">
+                View Packages & Pricing ↓
+            </button>
         </div>
     </section>
 
-    <!-- PRICING & PACKAGES SECTION -->
-    <section class="section pricing-section">
+    <!-- EVENT PHOTOGRAPHY SERVICE SECTION -->
+    <section id="events-service" class="section service-detail-section">
+        <div class="service-detail-container">
+            <h2>Event Photography</h2>
+            <p class="service-intro">Comprehensive aerial coverage for school events, community celebrations, and special occasions. Full-day services with edited highlights and video options.</p>
+            
+            <div class="service-features-grid">
+                <div class="feature-box">
+                    <div class="feature-icon">🏫</div>
+                    <h4>Event Expertise</h4>
+                    <p>Specialized coverage for schools, sports days, graduations, and community events</p>
+                </div>
+                <div class="feature-box">
+                    <div class="feature-icon">🎬</div>
+                    <h4>Video Included</h4>
+                    <p>Up to 3 edited videos (2-5 minutes each) with premium packages</p>
+                </div>
+                <div class="feature-box">
+                    <div class="feature-icon">📦</div>
+                    <h4>Complete Coverage</h4>
+                    <p>All usable photos professionally edited and delivered</p>
+                </div>
+                <div class="feature-box">
+                    <div class="feature-icon">⏱️</div>
+                    <h4>Quick Delivery</h4>
+                    <p>Fast turnaround from 10-24 hours after your event</p>
+                </div>
+            </div>
+
+            <button class="btn btn-scroll-to-pricing" onclick="scrollToPackages('events')">
+                View Packages & Pricing ↓
+            </button>
+        </div>
+    </section>
+
+    <!-- PRICING SECTION -->
+    <section id="pricing-section" class="section pricing-section">
         <div class="pricing-container">
             <h2>Packages & Pricing</h2>
-            <p class="pricing-intro">Flexible options tailored to your budget</p>
 
-            <div class="pricing-grid">
-                
-                <div class="pricing-card">
-                    <h3>Starter</h3>
-                    <div class="pricing-price">$300</div>
-                    <p class="pricing-duration">Per Session</p>
-                    <ul class="pricing-features">
-                        <li>✓ 1-2 hours of shooting</li>
-                        <li>✓ High-res photos</li>
-                        <li>✓ Basic editing</li>
-                        <li>✓ Digital delivery</li>
-                        <li>✗ Video included</li>
-                    </ul>
-                    <a href="/#contact" class="btn">Book Now</a>
+            <!-- AERIAL PHOTOGRAPHY PRICING -->
+            <div id="aerial-pricing" class="pricing-service-group active-pricing">
+                <h3 class="pricing-service-title">Aerial Photography Packages</h3>
+                <div class="pricing-grid">
+                    
+                    <!-- Essentials Package -->
+                    <div class="pricing-card">
+                        <h4>Essentials Package</h4>
+                        <div class="pricing-price">$80</div>
+                        <p class="pricing-duration">Per Session</p>
+                        <ul class="pricing-features">
+                            <li>✓ Professional aerial drone photography</li>
+                            <li>✓ 3 fully edited images</li>
+                            <li>✓ Fast 6-10 hour turnaround</li>
+                            <li>✓ Ethical, accurate editing</li>
+                            <li>✓ Travel within 30 km included</li>
+                        </ul>
+                        <p class="pricing-note">Best for: Standard listings, rental properties</p>
+                        <a href="/#contact" class="btn">Book Now</a>
+                    </div>
+
+                    <!-- Premium Package -->
+                    <div class="pricing-card featured">
+                        <div class="pricing-badge">POPULAR</div>
+                        <h4>Premium Package</h4>
+                        <div class="pricing-price">$120</div>
+                        <p class="pricing-duration">Per Session</p>
+                        <ul class="pricing-features">
+                            <li>✓ Professional aerial drone photography</li>
+                            <li>✓ 5-7 fully edited images</li>
+                            <li>✓ Fast 2-6 hour turnaround</li>
+                            <li>✓ Additional lifestyle shots included</li>
+                            <li>✓ Travel within 30 km included</li>
+                        </ul>
+                        <p class="pricing-note">Best for: Premium listings, lifestyle-focused properties</p>
+                        <a href="/#contact" class="btn">Book Now</a>
+                    </div>
+
                 </div>
 
-                <div class="pricing-card featured">
-                    <div class="pricing-badge">POPULAR</div>
-                    <h3>Professional</h3>
-                    <div class="pricing-price">$600</div>
-                    <p class="pricing-duration">Per Day</p>
-                    <ul class="pricing-features">
-                        <li>✓ Full day coverage (8 hours)</li>
-                        <li>✓ Photos & 4K video</li>
-                        <li>✓ Professional editing</li>
-                        <li>✓ Color grading</li>
-                        <li>✓ Highlight reel included</li>
-                    </ul>
-                    <a href="/#contact" class="btn">Book Now</a>
+                <!-- ADD-ONS -->
+                <div class="add-ons-section">
+                    <h4>Add-Ons</h4>
+                    <div class="add-ons-grid">
+                        <div class="add-on-item">
+                            <p><strong>Priority Delivery (Within 1-2 Hours)</strong></p>
+                            <p class="add-on-price">+$35</p>
+                        </div>
+                    </div>
                 </div>
 
-                <div class="pricing-card">
-                    <h3>Premium</h3>
-                    <div class="pricing-price">$1,500</div>
-                    <p class="pricing-duration">Multi-Day Project</p>
-                    <ul class="pricing-features">
-                        <li>✓ 2-3 days of coverage</li>
-                        <li>✓ Unlimited shots & 4K/6K video</li>
-                        <li>✓ Professional post-production</li>
-                        <li>✓ Custom deliverables</li>
-                        <li>✓ Consultation included</li>
-                    </ul>
-                    <a href="/#contact" class="btn">Book Now</a>
+                <!-- TRAVEL POLICY -->
+                <div class="travel-policy-section">
+                    <h4>Travel Policy</h4>
+                    <table class="travel-table">
+                        <tr>
+                            <td><strong>Within 30 km of Crangan Bay</strong></td>
+                            <td>Free</td>
+                        </tr>
+                        <tr>
+                            <td><strong>30–50 km</strong></td>
+                            <td>$30 travel fee</td>
+                        </tr>
+                        <tr>
+                            <td><strong>50–70 km</strong></td>
+                            <td>$50 travel fee</td>
+                        </tr>
+                        <tr>
+                            <td><strong>70 km+</strong></td>
+                            <td>Custom quote</td>
+                        </tr>
+                    </table>
                 </div>
+            </div>
 
+            <!-- EVENT PHOTOGRAPHY PRICING -->
+            <div id="events-pricing" class="pricing-service-group">
+                <h3 class="pricing-service-title">Event Photography Packages</h3>
+                <div class="pricing-grid">
+                    
+                    <!-- Basic Event Package -->
+                    <div class="pricing-card">
+                        <h4>Basic Event Package</h4>
+                        <div class="pricing-price">$150</div>
+                        <p class="pricing-duration">Per Event</p>
+                        <ul class="pricing-features">
+                            <li>✓ 2-3 hours of coverage</li>
+                            <li>✓ 10–30 edited photos</li>
+                            <li>✓ Delivery within 24 hours</li>
+                            <li>✓ Digital files provided</li>
+                        </ul>
+                        <p class="pricing-note">Best for: Small school events, assemblies, ceremonies</p>
+                        <a href="/#contact" class="btn">Book Now</a>
+                    </div>
+
+                    <!-- Advanced Event Package -->
+                    <div class="pricing-card featured">
+                        <div class="pricing-badge">POPULAR</div>
+                        <h4>Advanced Event Package</h4>
+                        <div class="pricing-price">$250</div>
+                        <p class="pricing-duration">Per Event</p>
+                        <ul class="pricing-features">
+                            <li>✓ Full event coverage</li>
+                            <li>✓ All usable photos edited</li>
+                            <li>✓ Up to 3 edited videos (2-5 min each)</li>
+                            <li>✓ Delivery within 10 hours</li>
+                            <li>✓ Premium editing included</li>
+                        </ul>
+                        <p class="pricing-note">Best for: Sports days, carnivals, graduations</p>
+                        <a href="/#contact" class="btn">Book Now</a>
+                    </div>
+
+                </div>
             </div>
 
         </div>
     </section>
 
-    <!-- WHY CHOOSE US SECTION -->
-    <section class="section why-us-section">
-        <div class="why-us-container">
-            <h2>Why Choose Aerial Productions?</h2>
-
-            <div class="why-us-grid">
-                
-                <div class="why-us-item">
-                    <div class="why-us-icon">⚡</div>
-                    <h3>Fast Turnaround</h3>
-                    <p>Quick project completion without compromising quality. Most projects delivered within 5-7 business days.</p>
-                </div>
-
-                <div class="why-us-item">
-                    <div class="why-us-icon">🎯</div>
-                    <h3>Professional Standards</h3>
-                    <p>Certified drone pilot with years of experience. All work meets industry standards and regulations.</p>
-                </div>
-
-                <div class="why-us-item">
-                    <div class="why-us-icon">💼</div>
-                    <h3>Smooth Workflow</h3>
-                    <p>Transparent communication from consultation to delivery. Clear expectations and professional project management.</p>
-                </div>
-
-                <div class="why-us-item">
-                    <div class="why-us-icon">🎨</div>
-                    <h3>Creative Vision</h3>
-                    <p>Collaborative approach to bring your vision to life. Customized solutions for unique project requirements.</p>
-                </div>
-
-            </div>
-
-        </div>
-    </section>
-
-    <!-- CTA SECTION -->
+    <!-- CONTACT CTA SECTION -->
     <section class="section cta-section">
         <div class="cta-container">
-            <h2>Ready to Get Started?</h2>
-            <p>Let's discuss your project and find the perfect solution</p>
-            <a href="/#contact" class="btn">Contact Me Today</a>
+            <h2>Ready to Work Together?</h2>
+            <p>Let's discuss your project and find the perfect package for your needs</p>
+            <a href="/#contact" class="btn">Get In Touch</a>
         </div>
     </section>
 
@@ -243,7 +252,7 @@
         <div class="footer-content">
             <div class="footer-section">
                 <h4>Services Available</h4>
-                <p>Central Coast</p>
+                <p>Central Coast, NSW</p>
             </div>
             <div class="footer-section">
                 <h4>Follow Me</h4>
@@ -263,6 +272,7 @@
     </footer>
 
     <script src="../js/menu.js"></script>
+    <script src="../js/services.js"></script>
 
 </body>
 </html>
