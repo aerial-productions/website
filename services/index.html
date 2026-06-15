@@ -35,20 +35,28 @@
         <p>Professional Aerial Solutions for Your Project</p>
     </div>
 
-    <!-- SERVICE CATEGORY TABS -->
-    <section class="section service-tabs-section">
-        <div class="service-tabs-container">
-            <div class="service-tabs-wrapper">
-                <button class="service-tab active" data-service="real-estate" onclick="switchService('real-estate')">
-                    Real Estate Coverage
-                </button>
-                <button class="service-tab" data-service="events" onclick="switchService('events')">
-                    Event Coverage
-                </button>
-                <button class="service-tab" data-service="commercial" onclick="switchService('commercial')">
-                    Commercial Coverage
-                </button>
-                <div class="tab-indicator"></div>
+    <!-- SERVICE CATEGORY BOXES SECTION -->
+    <section class="section service-boxes-section">
+        <div class="service-boxes-container">
+            <div class="service-box" onclick="scrollToPricingTab('real-estate')">
+                <div class="service-box-icon">📷</div>
+                <h3>Real Estate Coverage</h3>
+                <p>Professional aerial photography for properties, listings, and real estate showcases</p>
+                <span class="service-box-arrow">→</span>
+            </div>
+
+            <div class="service-box" onclick="scrollToPricingTab('events')">
+                <div class="service-box-icon">🎥</div>
+                <h3>Event Coverage</h3>
+                <p>Comprehensive aerial coverage for schools, sports, and community events</p>
+                <span class="service-box-arrow">→</span>
+            </div>
+
+            <div class="service-box" onclick="scrollToPricingTab('commercial')">
+                <div class="service-box-icon">🏢</div>
+                <h3>Commercial Coverage</h3>
+                <p>Specialized aerial solutions for corporate, advertising, and custom projects</p>
+                <span class="service-box-arrow">→</span>
             </div>
         </div>
     </section>
@@ -58,9 +66,24 @@
         <div class="pricing-container">
             <h2>Packages & Pricing</h2>
 
+            <!-- PRICING TABS -->
+            <div class="pricing-tabs-wrapper">
+                <button class="pricing-tab active" data-pricing="real-estate" onclick="switchPricingTab('real-estate')">
+                    Real Estate Coverage
+                </button>
+                <button class="pricing-tab" data-pricing="events" onclick="switchPricingTab('events')">
+                    Event Coverage
+                </button>
+                <button class="pricing-tab" data-pricing="commercial" onclick="switchPricingTab('commercial')">
+                    Commercial Coverage
+                </button>
+                <button class="pricing-tab" data-pricing="custom" onclick="switchPricingTab('custom')">
+                    Custom
+                </button>
+            </div>
+
             <!-- REAL ESTATE PRICING -->
             <div id="real-estate-pricing" class="pricing-service-group active-pricing">
-                <h3 class="pricing-service-title">Real Estate Aerial Photography</h3>
                 <div class="pricing-grid">
                     
                     <!-- Essentials Package -->
@@ -75,7 +98,7 @@
                             <li>✓ Ethical, accurate editing</li>
                             <li>✓ Travel within 30 km included</li>
                         </ul>
-                        <p class="pricing-note"><strong>Best for:</strong> Standard listings, rental properties, agents needing quick aerials</p>
+                        <p class="pricing-note"><strong>Best for:</strong> Standard listings, rental properties</p>
                         <a href="/#contact" class="btn">Book Now</a>
                     </div>
 
@@ -89,10 +112,10 @@
                             <li>✓ Professional aerial drone photography</li>
                             <li>✓ 5-7 fully edited images</li>
                             <li>✓ Fast 2-6 hour turnaround</li>
-                            <li>✓ Lifestyle shots (parks, beaches, shops, schools)</li>
+                            <li>✓ Lifestyle shots included</li>
                             <li>✓ Travel within 30 km included</li>
                         </ul>
-                        <p class="pricing-note"><strong>Best for:</strong> Premium listings, lifestyle-focused properties, location is key</p>
+                        <p class="pricing-note"><strong>Best for:</strong> Premium listings, lifestyle-focused properties</p>
                         <a href="/#contact" class="btn">Book Now</a>
                     </div>
 
@@ -103,7 +126,7 @@
                     <h4>Add-Ons</h4>
                     <div class="add-ons-grid">
                         <div class="add-on-item">
-                            <p><strong>Priority Delivery (Within 1-2 Hours)</strong> — +$35</p>
+                            <p><strong>Priority Delivery</strong> (Within 1-2 Hours) — <strong>$35</strong></p>
                         </div>
                     </div>
                 </div>
@@ -134,7 +157,6 @@
 
             <!-- EVENT PHOTOGRAPHY PRICING -->
             <div id="events-pricing" class="pricing-service-group">
-                <h3 class="pricing-service-title">School & Community Event Photography</h3>
                 <div class="pricing-grid">
                     
                     <!-- Basic Event Package -->
@@ -148,7 +170,7 @@
                             <li>✓ Delivery within 24 hours</li>
                             <li>✓ Professional editing</li>
                         </ul>
-                        <p class="pricing-note"><strong>Best for:</strong> Small school events, assemblies, award ceremonies</p>
+                        <p class="pricing-note"><strong>Best for:</strong> Small school events, assemblies, ceremonies</p>
                         <a href="/#contact" class="btn">Book Now</a>
                     </div>
 
@@ -173,11 +195,10 @@
 
             <!-- COMMERCIAL PRICING -->
             <div id="commercial-pricing" class="pricing-service-group">
-                <h3 class="pricing-service-title">Commercial & Custom Coverage</h3>
                 <div class="pricing-grid">
                     
-                    <div class="pricing-card">
-                        <h4>Custom Project</h4>
+                    <div class="pricing-card featured">
+                        <h4>Commercial Package</h4>
                         <div class="pricing-price">Custom</div>
                         <p class="pricing-duration">Tailored Pricing</p>
                         <ul class="pricing-features">
@@ -191,6 +212,44 @@
                         <a href="/#contact" class="btn">Get Custom Quote</a>
                     </div>
 
+                </div>
+            </div>
+
+            <!-- CUSTOM PRICING -->
+            <div id="custom-pricing" class="pricing-service-group">
+                <div class="pricing-grid">
+                    
+                    <div class="pricing-card featured">
+                        <h4>Custom Project</h4>
+                        <div class="pricing-price">Custom</div>
+                        <p class="pricing-duration">Your Requirements</p>
+                        <ul class="pricing-features">
+                            <li>✓ Tailored to your needs</li>
+                            <li>✓ Specialized solutions</li>
+                            <li>✓ Professional consultation</li>
+                            <li>✓ Flexible scheduling</li>
+                            <li>✓ Full support throughout</li>
+                        </ul>
+                        <p class="pricing-note"><strong>For:</strong> Any project with unique requirements</p>
+                        <a href="/#contact" class="btn">Request Custom Quote</a>
+                    </div>
+
+                </div>
+
+                <!-- ADD-ONS FOR CUSTOM -->
+                <div class="add-ons-section">
+                    <h4>Add-Ons & Extras</h4>
+                    <div class="add-ons-grid">
+                        <div class="add-on-item">
+                            <p><strong>Priority Delivery</strong> (Within 1-2 Hours) — <strong>$35</strong></p>
+                        </div>
+                        <div class="add-on-item">
+                            <p><strong>Extended Coverage</strong> (Additional hours) — Contact for rates</p>
+                        </div>
+                        <div class="add-on-item">
+                            <p><strong>Video Editing</strong> (Professional editing) — Contact for rates</p>
+                        </div>
+                    </div>
                 </div>
             </div>
 
