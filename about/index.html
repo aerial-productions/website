@@ -1,13 +1,136 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<title>About</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About - Aerial Productions</title>
+    <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
 
-<h1>About</h1>
+    <!-- HERO SECTION -->
+    <div class="hero">
+        <button class="menu-btn" onclick="openMenu()" aria-label="Open Menu">
+            ☰
+        </button>
 
-<a href="https://aerial-productions.com.au/">Back Home</a>
+        <h1>About Me</h1>
+        <p>Certified Drone Pilot • Professional Videographer</p>
+    </div>
+
+    <!-- SIDEBAR -->
+    <div id="sidebar" class="sidebar">
+        <span class="close-btn" onclick="closeMenu()">×</span>
+        <a href="/" onclick="closeMenu()">Home</a>
+        <a href="/#about" onclick="closeMenu()">About Me</a>
+        <a href="/portfolio/" onclick="closeMenu()">Portfolio</a>
+        <a href="/#contact" onclick="closeMenu()">Contact</a>
+    </div>
+
+    <!-- ABOUT INTRO SECTION -->
+    <section class="section about-intro-section">
+        <div class="about-intro-container">
+            <h2>Welcome to Aerial Productions</h2>
+            <div class="about-intro-text">
+                <p>
+                    I'm Lachlan, a certified drone pilot specialising in high-quality aerial photography and videography for real estate, events, and commercial projects. With years of experience and a passion for capturing stunning visuals, I bring professionalism and creativity to every project.
+                </p>
+                <p>
+                    My focus is simple: deliver sharp, cinematic visuals with fast turnaround times and a smooth, professional workflow. Whether it's showcasing a property, elevating your brand, or documenting a special event, I'm here to bring your vision to life.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ABOUT SERVICES SECTION -->
+    <section class="section about-services-section">
+        <div class="services-container">
+            <div class="services-image">
+                <img src="../images/4.jpg" alt="Services" class="services-photo">
+            </div>
+            <div class="services-content">
+                <h2>What I Offer</h2>
+                <div class="services-list">
+                    <div class="service-item">
+                        <h3>Aerial Photography</h3>
+                        <p>Crisp, high-resolution imagery for real estate, events, and commercial use. Perfect for showcasing properties, locations, and memorable moments.</p>
+                    </div>
+                    <div class="service-item">
+                        <h3>Cinematic Videography</h3>
+                        <p>Smooth, dynamic aerial footage tailored to your project. From promotional videos to event coverage, I create visuals that tell your story.</p>
+                    </div>
+                    <div class="service-item">
+                        <h3>Content Creation</h3>
+                        <p>Engaging visuals designed for marketing, social media, and brand storytelling. Let's create content that stands out.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- WHY CHOOSE ME SECTION -->
+    <section class="section why-us-section">
+        <div class="why-us-container">
+            <h2>Why Choose Me</h2>
+            <div class="why-us-grid">
+                <div class="why-us-item">
+                    <div class="why-us-icon">✈️</div>
+                    <h3>Certified & Professional</h3>
+                    <p>Licensed drone pilot with comprehensive training and insurance coverage for peace of mind.</p>
+                </div>
+                <div class="why-us-item">
+                    <div class="why-us-icon">⚡</div>
+                    <h3>Fast Turnaround</h3>
+                    <p>Quick delivery without compromising quality. Most projects completed within 48 hours.</p>
+                </div>
+                <div class="why-us-item">
+                    <div class="why-us-icon">🎬</div>
+                    <h3>Cinematic Quality</h3>
+                    <p>Professional-grade equipment and editing to deliver stunning, broadcast-quality footage.</p>
+                </div>
+                <div class="why-us-item">
+                    <div class="why-us-icon">💼</div>
+                    <h3>Smooth Workflow</h3>
+                    <p>Professional communication and seamless project management from start to finish.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CALL TO ACTION -->
+    <section class="section cta-section">
+        <div class="cta-container">
+            <h2>Ready to Elevate Your Project?</h2>
+            <p>Let's create something exceptional together. Get in touch today to discuss your aerial photography and videography needs.</p>
+            <a href="/#contact" class="btn">Get Started</a>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>Services Available</h4>
+                <p>Central Coast</p>
+            </div>
+            <div class="footer-section">
+                <h4>Follow Me</h4>
+                <div class="social-links">
+                    <a href="https://www.instagram.com/aerial.productions01/" target="_blank" rel="noopener noreferrer">Instagram</a>
+                    <a href="https://www.facebook.com/profile.php?id=61590356492875" target="_blank" rel="noopener noreferrer">Facebook</a>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h4>Contact</h4>
+                <p><a href="mailto:aerial-productions01@gmail.com">aerial-productions01@gmail.com</a></p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Aerial Productions. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="../js/menu.js"></script>
 
 </body>
 </html>
