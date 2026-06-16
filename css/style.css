@@ -230,7 +230,7 @@ button,
 }
 
 .services-container{
-    max-width:1200px;
+    max-width:1400px;
     width:100%;
     display:grid;
     grid-template-columns:1fr 1fr;
@@ -245,7 +245,8 @@ button,
 
 .services-photo{
     width:100%;
-    max-width:400px;
+    max-width:600px;
+    height:600px;
     border-radius:15px;
     box-shadow:0 10px 40px rgba(0,0,0,0.15);
     object-fit:cover;
@@ -1240,7 +1241,8 @@ button,
     }
 
     .services-photo{
-        max-width:300px;
+        max-width:100%;
+        height:500px;
     }
 
     .portfolio-grid{
@@ -1298,6 +1300,15 @@ button,
 
     .service-item{
         padding:20px;
+    }
+
+    .services-container{
+        gap:30px;
+    }
+
+    .services-photo{
+        max-width:100%;
+        height:400px;
     }
 
     .sidebar{
@@ -1442,5 +1453,14 @@ button,
     .footer-bottom{
         font-size:0.8rem;
         padding-top:20px;
+    }
+
+    .services-container{
+        gap:20px;
+    }
+
+    .services-photo{
+        max-width:100%;
+        height:300px;
     }
 }
