@@ -26,6 +26,11 @@ const galleryData = {
 let currentGallery = '';
 let currentPhotoIndex = 0;
 
+function getRandomImage(category) {
+    const images = galleryData[category].images;
+    return images[Math.floor(Math.random() * images.length)].src;
+}
+
 function openGallery(category) {
     currentGallery = category;
     currentPhotoIndex = 0;
@@ -56,13 +61,13 @@ function openGallery(category) {
         thumbnailsContainer.appendChild(thumb);
     });
     
-    modal.style.display = 'flex';
+    modal.classList.add('open');
     document.body.style.overflow = 'hidden';
 }
 
 function closeGallery() {
     const modal = document.getElementById('galleryModal');
-    modal.style.display = 'none';
+    modal.classList.remove('open');
     document.body.style.overflow = 'auto';
 }
 
@@ -98,12 +103,40 @@ function updateGallery() {
     });
 }
 
-// Close modal when clicking outside
+// Set random cover images on load
 document.addEventListener('DOMContentLoaded', function() {
+    // Set random cover images for each portfolio item
+    const realEstateImg = document.querySelector('[data-gallery="real-estate"] .portfolio-image img');
+    const eventsImg = document.querySelector('[data-gallery="events"] .portfolio-image img');
+    const commercialImg = document.querySelector('[data-gallery="commercial"] .portfolio-image img');
+    
+    if (realEstateImg) realEstateImg.src = getRandomImage('real-estate');
+    if (eventsImg) eventsImg.src = getRandomImage('events');
+    if (commercialImg) commercialImg.src = getRandomImage('commercial');
+    
+    // Close modal when clicking outside
     const modal = document.getElementById('galleryModal');
     window.addEventListener('click', function(event) {
         if (event.target === modal) {
             closeGallery();
+        }
+    });
+    
+    // Close modal on Escape key
+    window.addEventListener('keydown', function(event) {
+        if (event.key === 'Escape') {
+            closeGallery();
+        }
+    });
+    
+    // Arrow key navigation
+    window.addEventListener('keydown', function(event) {
+        if (modal.classList.contains('open')) {
+            if (event.key === 'ArrowRight') {
+                nextPhoto();
+            } else if (event.key === 'ArrowLeft') {
+                previousPhoto();
+            }
         }
     });
 });
