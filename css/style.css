@@ -114,6 +114,11 @@ button,
 .services-hero p{
     font-size:1.3rem;
     text-shadow:0 0 10px rgba(0,0,0,0.7);
+    margin-bottom:0;
+}
+
+.portfolio-hero-button{
+    margin-top:40px;
 }
 
 /* BUTTON */
