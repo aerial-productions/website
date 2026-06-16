@@ -2,12 +2,35 @@ let lastScrollTop = 0;
 let scrollDirection = 'down';
 
 function openMenu() {
-    document.getElementById("sidebar").style.width = "250px";
+    const sidebar = document.getElementById("sidebar");
+    if (sidebar) {
+        sidebar.classList.add('active');
+    }
 }
 
 function closeMenu() {
-    document.getElementById("sidebar").style.width = "0";
+    const sidebar = document.getElementById("sidebar");
+    if (sidebar) {
+        sidebar.classList.remove('active');
+    }
 }
+
+// Close menu when clicking outside
+document.addEventListener('click', function(event) {
+    const sidebar = document.getElementById("sidebar");
+    const menuBtn = document.querySelector('.menu-btn');
+    
+    if (sidebar && menuBtn && !sidebar.contains(event.target) && !menuBtn.contains(event.target)) {
+        closeMenu();
+    }
+});
+
+// Close menu when pressing Escape
+document.addEventListener('keydown', function(event) {
+    if (event.key === 'Escape') {
+        closeMenu();
+    }
+});
 
 // Scroll detection for menu button visibility
 window.addEventListener('scroll', function() {
