@@ -44,32 +44,6 @@
 
     </div>
 
-    <!-- FLOATING CONTACT FORM -->
-    <div id="floating-contact" class="floating-contact">
-        <button id="contact-toggle" class="contact-toggle" onclick="toggleFloatingForm()">
-            💬
-        </button>
-        <div id="floating-form-container" class="floating-form-container">
-            <button class="floating-close" onclick="closeFloatingForm()">×</button>
-            <h3>Get in Touch</h3>
-            <form action="https://api.web3forms.com/submit" method="POST" class="floating-form">
-                <input type="hidden" name="access_key" value="80ab2f89-58ec-45d9-b4eb-1a56dacea154">
-                <input type="hidden" name="redirect" value="https://aerial-productions.com.au/thank-you/">
-                
-                <div class="form-group">
-                    <input type="text" name="name" placeholder="Your Name" required>
-                </div>
-                <div class="form-group">
-                    <input type="email" name="email" placeholder="Your Email" required>
-                </div>
-                <div class="form-group">
-                    <textarea name="message" placeholder="Your Message" rows="4" required></textarea>
-                </div>
-                <button type="submit" class="btn btn-submit">Send</button>
-            </form>
-        </div>
-    </div>
-
     <!-- ABOUT ME SECTION - INTRO -->
     <section id="about" class="section about-intro-section">
         <div class="about-intro-container">
@@ -117,27 +91,24 @@
             <h2>Contact Me</h2>
             <p class="contact-intro">Get in Touch</p>
             
-            <form action="https://api.web3forms.com/submit" method="POST" class="contact-form" id="contact-form">
-                <input type="hidden" name="access_key" value="80ab2f89-58ec-45d9-b4eb-1a56dacea154">
-                <input type="hidden" name="redirect" value="https://aerial-productions.com.au/thank-you/">
-                
+            <form id="contact-form" class="contact-form">
                 <div class="form-group">
-                    <input type="text" name="name" placeholder="Your Name" required>
-                    <span class="form-error" id="name-error"></span>
+                    <input type="text" id="name" name="name" placeholder="Your Name" data-fs-field required>
+                    <span class="form-error" data-fs-error="name"></span>
                 </div>
                 <div class="form-group">
-                    <input type="email" name="email" placeholder="Your Email" required>
-                    <span class="form-error" id="email-error"></span>
+                    <input type="email" id="email" name="email" placeholder="Your Email" data-fs-field required>
+                    <span class="form-error" data-fs-error="email"></span>
                 </div>
                 <div class="form-group">
-                    <input type="tel" name="phone" placeholder="Your Phone Number" pattern="[0-9\s\-\+\(\)]+" required>
-                    <span class="form-error" id="phone-error"></span>
+                    <input type="tel" id="phone" name="phone" placeholder="Your Phone Number" data-fs-field pattern="[0-9\s\-\+\(\)]+" required>
+                    <span class="form-error" data-fs-error="phone"></span>
                 </div>
                 <div class="form-group">
-                    <textarea name="message" placeholder="What are you inquiring about?" rows="5" required></textarea>
-                    <span class="form-error" id="message-error"></span>
+                    <textarea id="message" name="message" placeholder="What are you inquiring about?" rows="5" data-fs-field required></textarea>
+                    <span class="form-error" data-fs-error="message"></span>
                 </div>
-                <button type="submit" class="btn btn-submit">Send Message</button>
+                <button type="submit" class="btn btn-submit" data-fs-submit-btn>Send Message</button>
             </form>
 
             <p class="contact-closing">If you're ready to elevate your next project, I'd love to work with you. Let's create something exceptional together.</p>
@@ -169,7 +140,19 @@
     </footer>
 
     <script src="js/menu.js"></script>
-    <script src="js/contact.js"></script>
+
+    <!-- Formspree Ajax Library -->
+    <script>
+      window.formspree = window.formspree || function () { (formspree.q = formspree.q || []).push(arguments); };
+      formspree('initForm', { 
+        formElement: '#contact-form', 
+        formId: 'mpqekwwb',
+        onSuccess: function() {
+          window.location.href = '/thank-you/';
+        }
+      });
+    </script>
+    <script src="https://unpkg.com/@formspree/ajax@1" defer></script>
 
 </body>
 </html>
