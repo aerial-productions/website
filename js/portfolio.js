@@ -3,22 +3,15 @@ const galleryData = {
     'real-estate': {
         title: 'Real Estate Showcase',
         images: [
-            { src: '../images/Adress.png', alt: 'Real Estate - Address' },
-            { src: '../images/Lake Macquarie.png', alt: 'Real Estate - Lake Macquarie' }
-        ]
-    },
-    'events': {
-        title: 'Event Coverage',
-        images: [
-            { src: '../images/3.png', alt: 'Event Coverage - 3' },
-            { src: '../images/5.png', alt: 'Event Coverage - 5' }
+            { src: '../images/Adress.png', alt: 'Real Estate - Address Showcase' },
+            { src: '../images/Lake Macquarie.png', alt: 'Real Estate - Lake Macquarie Waterfront' }
         ]
     },
     'commercial': {
         title: 'Commercial Projects',
         images: [
-            { src: '../images/2026-04-24-12-54-01-326.JPG.png', alt: 'Commercial Project - 1' },
-            { src: '../images/2026-04-24-12-36-49-029.JPG.png', alt: 'Commercial Project - 2' }
+            { src: '../images/2026-04-24-12-54-01-326.JPG', alt: 'Commercial Project - Aerial View' },
+            { src: '../images/2026-04-24-12-36-49-029.JPG', alt: 'Commercial Project - Property Coverage' }
         ]
     }
 };
@@ -63,6 +56,10 @@ function openGallery(category) {
     
     modal.classList.add('open');
     document.body.style.overflow = 'hidden';
+    
+    // Return focus after modal closes
+    const closeBtn = modal.querySelector('.gallery-close');
+    closeBtn.focus();
 }
 
 function closeGallery() {
@@ -107,11 +104,9 @@ function updateGallery() {
 document.addEventListener('DOMContentLoaded', function() {
     // Set random cover images for each portfolio item
     const realEstateImg = document.querySelector('[data-gallery="real-estate"] .portfolio-image img');
-    const eventsImg = document.querySelector('[data-gallery="events"] .portfolio-image img');
     const commercialImg = document.querySelector('[data-gallery="commercial"] .portfolio-image img');
     
     if (realEstateImg) realEstateImg.src = getRandomImage('real-estate');
-    if (eventsImg) eventsImg.src = getRandomImage('events');
     if (commercialImg) commercialImg.src = getRandomImage('commercial');
     
     // Close modal when clicking outside
